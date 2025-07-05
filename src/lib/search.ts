@@ -62,18 +62,29 @@ export function formatSearchResults(results: ExaSearchResult[]): string {
 export function shouldPerformSearch(message: string): boolean {
   const searchTriggers = [
     'search for',
+    'search',
     'look up',
     'find information about',
     'what is',
+    'what are',
     'tell me about',
-    'latest news',
+    'latest',
     'current',
     'recent',
     'today',
     'now',
-    'update on'
+    'update on',
+    'free models',
+    'openrouter',
+    'models available',
+    'working models'
   ]
 
   const lowerMessage = message.toLowerCase()
-  return searchTriggers.some(trigger => lowerMessage.includes(trigger))
+  const shouldSearch = searchTriggers.some(trigger => lowerMessage.includes(trigger))
+
+  // Debug logging
+  console.log('Search check:', { message: lowerMessage, shouldSearch, triggers: searchTriggers })
+
+  return shouldSearch
 }

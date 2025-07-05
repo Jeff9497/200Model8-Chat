@@ -1,5 +1,5 @@
 import { Bot, User, Copy, Check, Edit2 } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 interface Message {
   id: string
@@ -17,6 +17,11 @@ export default function ChatMessage({ message, onEdit }: ChatMessageProps) {
   const [copied, setCopied] = useState(false)
   const [isEditing, setIsEditing] = useState(false)
   const [editContent, setEditContent] = useState(message.content)
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   const copyToClipboard = async () => {
     try {
@@ -29,7 +34,10 @@ export default function ChatMessage({ message, onEdit }: ChatMessageProps) {
   }
 
   const formatTime = (date: Date) => {
-    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+    // Use a consistent format to avoid server/client hydration mismatch
+    const hours = date.getHours().toString().padStart(2, '0')
+    const minutes = date.getMinutes().toString().padStart(2, '0')
+    return `${hours}:${minutes}`
   }
 
   const handleEdit = () => {
@@ -92,7 +100,9 @@ export default function ChatMessage({ message, onEdit }: ChatMessageProps) {
         </div>
         
         <div className={`flex items-center mt-1 space-x-2 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-          <span className="text-xs text-gray-400">{formatTime(message.timestamp)}</span>
+          <span className="text-xs text-gray-400">
+            {isClient ? formatTime(message.timestamp) : '--:--'}
+          </span>
 
           {message.role === 'user' && onEdit && !isEditing && (
             <button

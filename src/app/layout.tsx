@@ -7,7 +7,20 @@ export const metadata: Metadata = {
   description: 'Access 200+ AI models for free through OpenRouter. Chat with GPT-4, Claude, Llama, and more!',
   keywords: 'AI, chat, free, OpenRouter, GPT-4, Claude, Llama, artificial intelligence',
   authors: [{ name: 'Jeff' }],
-  viewport: 'width=device-width, initial-scale=1',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+      { url: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' }
+    ],
+    apple: { url: '/favicon.svg', sizes: '180x180', type: 'image/svg+xml' }
+  }
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 }
 
 export default function RootLayout({

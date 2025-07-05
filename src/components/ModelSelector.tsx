@@ -15,74 +15,56 @@ export function getModelCapabilities(modelId: string) {
 
 const models = [
   {
-    id: 'meta-llama/llama-3.1-8b-instruct:free',
-    name: 'Llama 3.1 8B (Free)',
-    provider: 'Meta',
-    icon: <Zap className="w-4 h-4" />,
-    description: 'Free open source model, great for most tasks',
-    supportsImages: false,
-    isFree: true
-  },
-  {
-    id: 'meta-llama/llama-3-8b-instruct:free',
-    name: 'Llama 3 8B (Free)',
-    provider: 'Meta',
-    icon: <Zap className="w-4 h-4" />,
-    description: 'Free open source model, fast and capable',
-    supportsImages: false,
-    isFree: true
-  },
-  {
-    id: 'microsoft/phi-3-mini-128k-instruct:free',
-    name: 'Phi-3 Mini (Free)',
-    provider: 'Microsoft',
-    icon: <Brain className="w-4 h-4" />,
-    description: 'Free small but capable model',
-    supportsImages: false,
-    isFree: true
-  },
-  {
-    id: 'google/gemma-7b-it:free',
-    name: 'Gemma 7B (Free)',
-    provider: 'Google',
-    icon: <Sparkles className="w-4 h-4" />,
-    description: 'Free Google model, good performance',
-    supportsImages: false,
-    isFree: true
-  },
-  {
     id: 'mistralai/mistral-7b-instruct:free',
     name: 'Mistral 7B (Free)',
     provider: 'Mistral AI',
     icon: <Zap className="w-4 h-4" />,
-    description: 'Free European AI model',
+    description: '✅ Working - Free European AI model',
     supportsImages: false,
     isFree: true
   },
   {
-    id: 'huggingface/zephyr-7b-beta:free',
-    name: 'Zephyr 7B (Free)',
-    provider: 'Hugging Face',
-    icon: <Brain className="w-4 h-4" />,
-    description: 'Free fine-tuned model, good for chat',
-    supportsImages: false,
-    isFree: true
-  },
-  {
-    id: 'openchat/openchat-7b:free',
-    name: 'OpenChat 7B (Free)',
-    provider: 'OpenChat',
-    icon: <Zap className="w-4 h-4" />,
-    description: 'Free conversational AI model',
-    supportsImages: false,
-    isFree: true
-  },
-  {
-    id: 'gryphe/mythomist-7b:free',
-    name: 'Mythomist 7B (Free)',
-    provider: 'Gryphe',
+    id: 'deepseek/deepseek-chat',
+    name: 'DeepSeek Chat (Free)',
+    provider: 'DeepSeek',
     icon: <Sparkles className="w-4 h-4" />,
-    description: 'Free creative writing model',
+    description: '✅ Working - Free Chinese AI model, very capable',
+    supportsImages: false,
+    isFree: true
+  },
+  {
+    id: 'deepseek/deepseek-chat-v3-0324:free',
+    name: 'DeepSeek Chat V3 (Free)',
+    provider: 'DeepSeek',
+    icon: <Sparkles className="w-4 h-4" />,
+    description: '✅ Working - Free DeepSeek latest chat model',
+    supportsImages: false,
+    isFree: true
+  },
+  {
+    id: 'anthropic/claude-3-haiku:beta',
+    name: 'Claude 3 Haiku Beta (Free)',
+    provider: 'Anthropic',
+    icon: <Brain className="w-4 h-4" />,
+    description: '✅ Working - Free beta with image support',
+    supportsImages: true,
+    isFree: true
+  },
+  {
+    id: 'meta-llama/llama-3.2-11b-vision-instruct:free',
+    name: 'Llama 3.2 11B Vision (Free)',
+    provider: 'Meta',
+    icon: <Sparkles className="w-4 h-4" />,
+    description: '✅ Working - Free Meta vision model with image support',
+    supportsImages: true,
+    isFree: true
+  },
+  {
+    id: 'featherless/qwerky-72b:free',
+    name: 'Qwerky 72B (Free)',
+    provider: 'Featherless',
+    icon: <Brain className="w-4 h-4" />,
+    description: '✅ Working - Free large model by Featherless',
     supportsImages: false,
     isFree: true
   },
@@ -91,7 +73,7 @@ const models = [
     name: 'Claude 3 Haiku (Low Cost)',
     provider: 'Anthropic',
     icon: <Brain className="w-4 h-4" />,
-    description: 'Very affordable with image support',
+    description: '✅ Working - Low cost with image support',
     supportsImages: true,
     isFree: false
   },
@@ -100,7 +82,7 @@ const models = [
     name: 'GPT-3.5 Turbo (Low Cost)',
     provider: 'OpenAI',
     icon: <Zap className="w-4 h-4" />,
-    description: 'Affordable and efficient',
+    description: 'Low cost and efficient',
     supportsImages: false,
     isFree: false
   }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
-import { X, Key, Save, ExternalLink, Info } from 'lucide-react'
+import { X, Key, Save, ExternalLink, Info, Palette } from 'lucide-react'
 import { setApiKey, getApiKey, removeApiKey } from '@/lib/openrouter'
+import { useTheme } from '@/contexts/ThemeContext'
 
 interface SettingsProps {
   isOpen: boolean
@@ -10,6 +11,7 @@ interface SettingsProps {
 export default function Settings({ isOpen, onClose }: SettingsProps) {
   const [apiKey, setApiKeyState] = useState('')
   const [saved, setSaved] = useState(false)
+  const { theme, setTheme } = useTheme()
 
   useEffect(() => {
     if (isOpen) {
@@ -88,6 +90,54 @@ export default function Settings({ isOpen, onClose }: SettingsProps) {
                   Remove
                 </button>
               )}
+            </div>
+          </div>
+
+          {/* Theme Section */}
+          <div className="space-y-3">
+            <div className="flex items-center space-x-2">
+              <Palette className="w-5 h-5 text-purple-400" />
+              <label className="text-sm font-medium text-white">
+                Theme
+              </label>
+            </div>
+
+            <div className="grid grid-cols-3 gap-2">
+              <button
+                onClick={() => setTheme('gradient')}
+                className={`p-3 rounded-lg border-2 transition-all ${
+                  theme === 'gradient'
+                    ? 'border-purple-500 bg-purple-500/20'
+                    : 'border-white/20 bg-white/5 hover:bg-white/10'
+                }`}
+              >
+                <div className="w-full h-8 rounded bg-gradient-to-r from-blue-500 to-purple-600 mb-2"></div>
+                <span className="text-xs text-white">Gradient</span>
+              </button>
+
+              <button
+                onClick={() => setTheme('dark')}
+                className={`p-3 rounded-lg border-2 transition-all ${
+                  theme === 'dark'
+                    ? 'border-gray-500 bg-gray-500/20'
+                    : 'border-white/20 bg-white/5 hover:bg-white/10'
+                }`}
+              >
+                <div className="w-full h-8 rounded bg-gray-800 mb-2"></div>
+                <span className="text-xs text-white">Dark</span>
+              </button>
+
+              <button
+                onClick={() => setTheme('light')}
+                className={`p-3 rounded-lg border-2 transition-all ${
+                  theme === 'light'
+                    ? 'border-blue-500 bg-blue-500/20'
+                    : 'border-white/20 bg-white/5 hover:bg-white/10'
+                }`}
+              >
+                <div className="w-full h-8 rounded bg-white mb-2"></div>
+                <span className="text-xs text-white">Light</span>
+              </button>
             </div>
           </div>
 
