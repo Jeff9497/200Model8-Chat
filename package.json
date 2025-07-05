@@ -1,0 +1,35 @@
+{
+  "name": "200model8-chat",
+  "version": "1.0.0",
+  "description": "Free AI Chat Interface with web search, file upload, and multiple themes",
+  "keywords": ["ai", "chat", "openrouter", "free", "llama", "mistral", "web-search"],
+  "author": "Jeff",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/200Model8-Chat.git"
+  },
+  "private": false,
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0 -p 3000",
+    "dev-mobile": "next dev -H 0.0.0.0 -p 8080",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "lucide-react": "^0.290.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "autoprefixer": "^10.0.0",
+    "postcss": "^8.0.0",
+    "tailwindcss": "^3.0.0",
+    "typescript": "^5.0.0"
+  }
+}
