@@ -1,6 +1,6 @@
 # 200Model8 - Free AI Chat Interface
 
-A beautiful, modern chat interface that provides **FREE** access to multiple AI models through OpenRouter. Chat with Llama 3.1, Mistral, Gemma, and other free models - all in one place!
+A beautiful, modern chat interface that provides **FREE** access to multiple AI models . Chat with Llama 3.1, Mistral, Gemma, and other free models - all in one place!
 
 ## ✨ Features
 
