@@ -54,14 +54,6 @@ npm run dev-mobile
 3. Toggle web search on/off using the search icon
 4. Start chatting!
 
-## 🌐 Deploy to Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/200Model8)
-
-1. Click the deploy button above
-2. Connect your GitHub account
-3. Deploy the project
-4. Your free AI chat is live!
 
 ## 🆓 Available Free Models
 
@@ -74,13 +66,7 @@ npm run dev-mobile
 - **Gryphe**: Mythomist 7B (Free)
 - **Low Cost**: Claude 3 Haiku, GPT-3.5 Turbo
 
-## 🛠️ Tech Stack
 
-- **Frontend**: Next.js 14, React, TypeScript
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **API**: OpenRouter AI
-- **Deployment**: Vercel
 
 ## 📝 Environment Variables
 
@@ -100,12 +86,10 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
-- [OpenRouter](https://openrouter.ai) for providing access to multiple AI models
-- [Vercel](https://vercel.com) for free hosting
 - All the amazing AI model providers
 
 ---
 
 **Made with ❤️ by Jeff**
 
-*Bringing free AI to everyone, everywhere.*
+*Bringing free AI to everyone.*
